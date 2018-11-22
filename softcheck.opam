@@ -1,0 +1,22 @@
+opam-version: "1.2"
+name: "softcheck"
+version: "0.1"
+maintainer: "João Reis <joaosreis@outlook.pt>"
+author: "João Reis <joaosreis@outlook.pt>"
+homepage: "https://github.com/joaosreis/softcheck"
+dev-repo: "git+https://github.com/joaosreis/softcheck"
+
+build: [["jbuilder" "build" "-p" name "-j" jobs]]
+
+build-test: [["jbuilder" "runtest" "-p" name "-j" jobs]]
+
+depends: [
+  "jbuilder" {build & >= "1.0+beta14"}
+  "ocamlgraph"
+  "facile"
+  "fix"
+  "batteries"
+  "menhir"
+  "cmdliner"
+  "kaputt" {test & >= "1.3"}
+]

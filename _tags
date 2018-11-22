@@ -1,0 +1,14 @@
+"src": include
+"src/analysis": include
+"src/framework": include
+"src/tip": include
+"src/tip/analysis": include
+"src/lattices": include
+"src/cao": include
+"src/cao/ast": include
+"src/cao/parser": include
+"src/cao/exceptions": include
+"src/cao/flow": include
+true: package(ocamlgraph), package(fix), package(batteries), package(kaputt), package(cmdliner)
+true: use_menhir
+true: explain

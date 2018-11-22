@@ -1,0 +1,11 @@
+(jbuild_version 1)
+
+(executables
+ ((names (tipTest caoTest))
+  (modules (tipTest caoTest))
+  (libraries (kaputt))))
+
+(alias
+ ((name runtest)
+  (deps (../exe/caoMain.exe ../exe/tipMain.exe))
+  (action (progn (run ./caoTest.exe) (run ./tipTest.exe)))))
